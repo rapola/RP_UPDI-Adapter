@@ -3,5 +3,8 @@
 UPDI Programming Adapter
 <br>
 ---
+### Schematic
+
+---
 #### 5 pcs. orderd and delivered (JLCPCB)
 ---

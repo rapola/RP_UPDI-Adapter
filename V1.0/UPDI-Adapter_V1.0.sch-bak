@@ -1,0 +1,352 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "UPDI-Adapter_V1.0"
+Date "2022-04-15"
+Rev "0"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x06 X1
+U 1 1 626B190B
+P 5275 4975
+F 0 "X1" H 5275 4575 50  0000 C CNN
+F 1 "Conn_01x06" H 5193 4541 50  0001 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53261-0671_1x06-1MP_P1.25mm_Horizontal" H 5275 4975 50  0001 C CNN
+F 3 "~" H 5275 4975 50  0001 C CNN
+	1    5275 4975
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 626B20DE
+P 4950 5250
+F 0 "#PWR0101" H 4950 5000 50  0001 C CNN
+F 1 "GND" H 4955 5077 50  0000 C CNN
+F 2 "" H 4950 5250 50  0001 C CNN
+F 3 "" H 4950 5250 50  0001 C CNN
+	1    4950 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0102
+U 1 1 626B2711
+P 6675 2875
+F 0 "#PWR0102" H 6675 2725 50  0001 C CNN
+F 1 "VCC" H 6690 3048 50  0000 C CNN
+F 2 "" H 6675 2875 50  0001 C CNN
+F 3 "" H 6675 2875 50  0001 C CNN
+	1    6675 2875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5075 5175 4950 5175
+Wire Wire Line
+	4950 5175 4950 5250
+Wire Wire Line
+	5075 5075 4425 5075
+Wire Wire Line
+	5075 4975 4425 4975
+Wire Wire Line
+	5075 4775 4425 4775
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 626B3529
+P 4525 3150
+F 0 "J1" H 4575 3475 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 4575 3476 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 4525 3150 50  0001 C CNN
+F 3 "~" H 4525 3150 50  0001 C CNN
+	1    4525 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 626B431C
+P 3650 2950
+F 0 "JP1" H 3650 3063 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 3650 3064 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 3650 2950 50  0001 C CNN
+F 3 "~" H 3650 2950 50  0001 C CNN
+	1    3650 2950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4325 3350 3850 3350
+Wire Wire Line
+	4325 2950 3850 2950
+Wire Wire Line
+	4825 2950 5050 2950
+Wire Wire Line
+	4825 3350 5050 3350
+Wire Wire Line
+	5050 2950 5450 2950
+Wire Wire Line
+	6675 2950 6675 2875
+$Comp
+L Device:LED D1
+U 1 1 626B88B1
+P 5050 2100
+F 0 "D1" H 5043 2225 50  0000 C CNN
+F 1 "LED" H 5043 2226 50  0001 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5050 2100 50  0001 C CNN
+F 3 "~" H 5050 2100 50  0001 C CNN
+	1    5050 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 626B8D74
+P 5050 2525
+F 0 "R1" V 5150 2475 50  0000 L CNN
+F 1 "470" V 5050 2450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4980 2525 50  0001 C CNN
+F 3 "~" H 5050 2525 50  0001 C CNN
+	1    5050 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 626BB896
+P 6250 2100
+F 0 "D2" H 6243 2225 50  0000 C CNN
+F 1 "LED" H 6243 2226 50  0001 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6250 2100 50  0001 C CNN
+F 3 "~" H 6250 2100 50  0001 C CNN
+	1    6250 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 626BB98E
+P 6250 2525
+F 0 "R2" V 6350 2475 50  0000 L CNN
+F 1 "470" V 6250 2450 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 2525 50  0001 C CNN
+F 3 "~" H 6250 2525 50  0001 C CNN
+	1    6250 2525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2950 6250 2950
+Wire Wire Line
+	6250 2950 6250 2675
+Wire Wire Line
+	6250 2950 6675 2950
+Connection ~ 6250 2950
+Wire Wire Line
+	6250 2375 6250 2250
+Wire Wire Line
+	5050 2950 5050 2675
+Connection ~ 5050 2950
+Wire Wire Line
+	5050 2375 5050 2250
+Wire Wire Line
+	6250 1950 6250 1825
+Wire Wire Line
+	6250 1825 5050 1825
+Wire Wire Line
+	4600 1825 4600 2025
+Wire Wire Line
+	5050 1950 5050 1825
+Wire Wire Line
+	5050 1825 4600 1825
+$Comp
+L power:GND #PWR0103
+U 1 1 626BF557
+P 4600 2025
+F 0 "#PWR0103" H 4600 1775 50  0001 C CNN
+F 1 "GND" H 4605 1852 50  0000 C CNN
+F 2 "" H 4600 2025 50  0001 C CNN
+F 3 "" H 4600 2025 50  0001 C CNN
+	1    4600 2025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 626BFDEF
+P 5050 3425
+F 0 "#PWR0104" H 5050 3175 50  0001 C CNN
+F 1 "GND" H 5055 3252 50  0000 C CNN
+F 2 "" H 5050 3425 50  0001 C CNN
+F 3 "" H 5050 3425 50  0001 C CNN
+	1    5050 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3350 5050 3425
+$Comp
+L power:VCC #PWR0105
+U 1 1 626C06A1
+P 4950 4525
+F 0 "#PWR0105" H 4950 4375 50  0001 C CNN
+F 1 "VCC" H 4965 4698 50  0000 C CNN
+F 2 "" H 4950 4525 50  0001 C CNN
+F 3 "" H 4950 4525 50  0001 C CNN
+	1    4950 4525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5075 4675 4950 4675
+Wire Wire Line
+	4950 4675 4950 4525
+Text Notes 4225 3500 0    50   ~ 0
+Diamex EXA-Prog
+Text Label 3850 2950 0    39   ~ 0
+EXA_TX
+Text Label 3850 3350 0    39   ~ 0
+EXA_RX
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP2
+U 1 1 626C2604
+P 3650 3350
+F 0 "JP2" H 3650 3463 50  0000 C CNN
+F 1 "SolderJumper_3_Bridged12" H 3650 3464 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 3650 3350 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	-1   0    0    -1  
+$EndComp
+Text Notes 5425 5100 1    50   ~ 0
+Target uC
+Text Label 3100 3150 0    39   ~ 0
+Tar_RX
+Text Label 3100 3575 0    39   ~ 0
+Tar_TX
+Wire Wire Line
+	3650 3100 3650 3150
+Wire Wire Line
+	3650 3150 3100 3150
+Wire Wire Line
+	3450 2950 3100 2950
+Wire Wire Line
+	3650 3500 3650 3575
+Wire Wire Line
+	3650 3575 3100 3575
+Wire Wire Line
+	3450 3350 3100 3350
+Text Label 3100 2950 0    39   ~ 0
+Tar_TX
+Text Label 3100 3350 0    39   ~ 0
+Tar_RX
+Text Label 4425 4975 0    39   ~ 0
+Tar_TX
+Text Label 4425 5075 0    39   ~ 0
+Tar_RX
+Wire Wire Line
+	5175 3050 4825 3050
+Text Label 4425 4775 0    39   ~ 0
+UPDI
+Text Label 5175 3050 2    39   ~ 0
+UPDI
+NoConn ~ 5075 4875
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 626C7F53
+P 8000 4225
+F 0 "J2" H 7950 4450 50  0000 L CNN
+F 1 "Conn_01x04" H 8080 4126 50  0001 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical" H 8000 4225 50  0001 C CNN
+F 3 "~" H 8000 4225 50  0001 C CNN
+	1    8000 4225
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 626C874B
+P 7675 4500
+F 0 "#PWR0106" H 7675 4250 50  0001 C CNN
+F 1 "GND" H 7680 4327 50  0000 C CNN
+F 2 "" H 7675 4500 50  0001 C CNN
+F 3 "" H 7675 4500 50  0001 C CNN
+	1    7675 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 4425 7675 4425
+Wire Wire Line
+	7675 4425 7675 4500
+Wire Wire Line
+	7800 4125 7400 4125
+Wire Wire Line
+	7800 4225 7100 4225
+Wire Wire Line
+	7800 4325 7100 4325
+Text Notes 8250 4425 1    50   ~ 0
+RP_DBG
+Text Label 6350 4225 0    39   ~ 0
+Tar_TX
+Text Label 6350 4325 0    39   ~ 0
+Tar_RX
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 626D78FA
+P 9650 4600
+F 0 "H1" H 9750 4600 50  0000 L CNN
+F 1 "MountingHole" H 9750 4555 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_DIN965" H 9650 4600 50  0001 C CNN
+F 3 "~" H 9650 4600 50  0001 C CNN
+	1    9650 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 626DE6B4
+P 6950 4225
+F 0 "R3" V 6900 4350 50  0000 L CNN
+F 1 "470" V 6950 4150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6880 4225 50  0001 C CNN
+F 3 "~" H 6950 4225 50  0001 C CNN
+	1    6950 4225
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 4225 6350 4225
+$Comp
+L Device:R R4
+U 1 1 626E052B
+P 6950 4325
+F 0 "R4" V 6900 4450 50  0000 L CNN
+F 1 "470" V 6950 4250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6880 4325 50  0001 C CNN
+F 3 "~" H 6950 4325 50  0001 C CNN
+	1    6950 4325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 4325 6350 4325
+$Comp
+L Switch:SW_DIP_x02 SW?
+U 1 1 625BF44B
+P 5750 3050
+F 0 "SW?" H 5750 3325 50  0000 C CNN
+F 1 "SW_DIP_x02" H 5750 3326 50  0001 C CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W7.62mm_P2.54mm" H 5750 3050 50  0001 C CNN
+F 3 "~" H 5750 3050 50  0001 C CNN
+	1    5750 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5050 1825
+Wire Wire Line
+	6675 2950 6675 3300
+Wire Wire Line
+	6675 3300 5350 3300
+Wire Wire Line
+	5350 3300 5350 3050
+Wire Wire Line
+	5350 3050 5450 3050
+Connection ~ 6675 2950
+Wire Wire Line
+	6050 3050 6475 3050
+Text Label 7400 4125 0    39   ~ 0
+J2_PWR
+Text Label 6475 3050 2    39   ~ 0
+J2_PWR
+$EndSCHEMATC
